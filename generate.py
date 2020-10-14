@@ -15,7 +15,7 @@ def measure_temp():
 def get_load():
 	return os.getloadavg()
 try:
-	connection = pika.BlockingConnection( pika.ConnectionParameters(host='localhost'))
+	connection = pika.BlockingConnection( pika.ConnectionParameters(host='192.168.3.107'))
 	channel = connection.channel()
 	channel.queue_declare(queue='test')
 except:
